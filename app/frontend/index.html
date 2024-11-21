@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastAPI Scan Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>FastAPI Scan Management</h1>
+    </header>
+    
+    <section class="upload-section">
+        <h2>Upload a File</h2>
+        <form id="upload-form" enctype="multipart/form-data">
+            <input type="file" id="file-upload" name="file" required />
+            <button type="submit">Upload</button>
+        </form>
+        <!-- This is where the backend response message will be shown -->
+        <p id="upload-message"></p>
+    </section>
+
+    <section class="scan-section">
+        <h2>Fetch Scan Data</h2>
+        <form id="fetch-scan-form">
+            <label for="scan-id">Scan ID:</label>
+            <input type="number" id="scan-id" name="scan_id" required />
+            <label for="data-type">Data Type:</label>
+            <select id="data-type" name="data_type" required>
+                <option value="pii">PII</option>
+                <option value="pci">PCI</option>
+                <option value="phi">PHI</option>
+            </select>
+            <button type="submit">Fetch Data</button>
+        </form>
+        <div id="scan-results"></div>
+    </section>
+
+    <section class="delete-section">
+        <h2>Delete a Scan</h2>
+        <form id="delete-scan-form">
+            <label for="delete-scan-id">Scan ID to delete:</label>
+            <input type="number" id="delete-scan-id" name="scan_id" required />
+            <button type="submit">Delete Scan</button>
+        </form>
+        <!-- Message for deletion result -->
+        <p id="delete-message"></p>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>

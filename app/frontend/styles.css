@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #0a77e4;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    margin-top: 30px;
+    color: #2c3e50;
+}
+
+section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, select, button {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#upload-message, #delete-message {
+    color: green;
+    font-weight: bold;
+}
+
+#error-message {
+    color: red;
+    font-weight: bold;
+}
+
+#scan-results {
+    margin-top: 20px;
+}
+
+#scan-results div {
+    padding: 10px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
