@@ -1,0 +1,8 @@
+Alice bought groceries worth $123.45 using her card 4111111111111111.  
+Bob's PAN is FGHIJ5678K, and his card number is 5500-0000-0000-0004.  
+Contact Charlie at 987-65-4321 for more details about the project.  
+A random card number: 6011000990139424.  
+John's PAN is UVWXY6789Z, and his phone number is 123-45-6789.  
+Random text here that doesn't contain sensitive info.  
+Another PAN hidden in text: ABCDE1234F.  
+Credit Card: 3782 822463 10005 was used at the restaurant.  

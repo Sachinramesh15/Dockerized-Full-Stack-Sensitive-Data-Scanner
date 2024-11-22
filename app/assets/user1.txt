@@ -1,0 +1,7 @@
+Name: Alice Smith
+PAN: ABCDE1234F
+SSN: 123-45-6789
+Credit Card: 4111 1111 1111 1111
+Medical Record Number: MRN-987654
+Insurance ID: INS-543210
+Test Result: Positive for Cholesterol (200 mg/dL)
