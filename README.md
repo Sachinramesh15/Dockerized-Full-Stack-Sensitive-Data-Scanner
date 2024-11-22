@@ -23,6 +23,49 @@ The **Sensitive Data Scanner Tool** is a comprehensive solution for detecting, c
 This tool integrates seamlessly into workflows, ensuring organizations can enhance compliance with data protection regulations.
 
 ---
+## **Database Architecture**
+
+The **PostgreSQL** database schema is structured to store information about scanned files and their classifications across PII, PCI, and PHI.  
+
+### **Tables**
+
+1. **`scans`**: Stores metadata about uploaded files.
+2. **`pii`**: Stores identified PII data for each file scan.
+3. **`pci`**: Stores identified PCI data for each file scan.
+4. **`phi`**: Stores identified PHI data for each file scan.
+
+### **Table Definitions**
+
+#### **`scans` Table**
+| **Column Name**    | **Data Type**    | **Description**                                   |
+|---------------------|------------------|---------------------------------------------------|
+| `id`               | `SERIAL`         | Primary key, unique identifier for each file scan. |
+| `file_name`        | `TEXT`           | Name of the uploaded file.                       |
+| `uploaded_date`    | `TIMESTAMP`      | Timestamp when the file was uploaded (default: current time). |
+
+#### **`pii` Table**
+| **Column Name**    | **Data Type**    | **Description**                                   |
+|---------------------|------------------|---------------------------------------------------|
+| `id`               | `SERIAL`         | Primary key, unique identifier for each PII record. |
+| `scan_id`          | `INTEGER`        | Foreign key referencing the `scans` table.       |
+| `data`             | `TEXT`           | The extracted PII data.                          |
+| `field_type`       | `TEXT`           | The type of PII field (e.g., PAN, SSN).          |
+
+#### **`pci` Table**
+| **Column Name**    | **Data Type**    | **Description**                                   |
+|---------------------|------------------|---------------------------------------------------|
+| `id`               | `SERIAL`         | Primary key, unique identifier for each PCI record. |
+| `scan_id`          | `INTEGER`        | Foreign key referencing the `scans` table.       |
+| `data`             | `TEXT`           | The extracted PCI data.                          |
+| `field_type`       | `TEXT`           | The type of PCI field (e.g., credit card numbers).|
+
+#### **`phi` Table**
+| **Column Name**    | **Data Type**    | **Description**                                   |
+|---------------------|------------------|---------------------------------------------------|
+| `id`               | `SERIAL`         | Primary key, unique identifier for each PHI record. |
+| `scan_id`          | `INTEGER`        | Foreign key referencing the `scans` table.       |
+| `data`             | `TEXT`           | The extracted PHI data.                          |
+| `field_type`       | `TEXT`           | The type of PHI field (e.g., medical record, test result). |
 
 ## **Key Features**
 
@@ -51,7 +94,6 @@ This tool integrates seamlessly into workflows, ensuring organizations can enhan
      - **FastAPI** backend
      - **PostgreSQL** database
      - **Nginx** reverse proxy
-     - Static frontend files
       
 7. **Modular, Linted Codebase**  
    - Backend code follows **modular design principles** and is consistently formatted using **autopep8** for readability and maintainability.
@@ -169,3 +211,15 @@ This project can be prepared for production using **AWS services** like **EC2**,
    - Handles SSL termination for secure communication.
    - Supports routing rules (e.g., `/` to frontend, `/api/` to backend based on the route called).
 
+## **User Interface Snippets**
+![op](app/assets/output1.png)
+![op](app/assets/output2.png)
+![op](app/assets/output3.png)
+![op](app/assets/output4.png)
+![op](app/assets/output5.png)
+
+## **Database Architecture Snippets**
+![db](app/assets/db1.png)
+![db](app/assets/db2.png)
+![db](app/assets/db3.png)
+![db](app/assets/db4.png)
