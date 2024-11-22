@@ -57,6 +57,9 @@ This tool integrates seamlessly into workflows, ensuring organizations can enhan
 
 8. **Comprehensive Unit Testing**  
    - **Pytest**-based unit tests ensure complete coverage for all backend functions using **mock data**, promoting reliability and robustness.
+
+9. **Sample Data:**
+   - Sample data for testing and experimentation is available in the `app/assets` directory.
 ---
 
 ## **Project Components**
