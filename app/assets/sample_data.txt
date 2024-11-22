@@ -1,0 +1,15 @@
+
+John Doe
+Pin: ABCDE1234F
+SSN: 123-45-6789
+Credit Card: 4111-1111-1111-1111
+Medical Record Number: 12345678
+Medical Test Result: Hemoglobin: 13.5 g/dL
+Health Insurance ID: INS123456789
+Some random text that does not contain sensitive information.
+PAN: XYZPL6789M
+SSN: 987-65-4321
+Credit Card: 5555-5555-5555-4444
+Medical Record Number: 87654321
+Medical Test Result: Cholesterol: 200 mg/dL
+Health Insurance ID: INS987654321
