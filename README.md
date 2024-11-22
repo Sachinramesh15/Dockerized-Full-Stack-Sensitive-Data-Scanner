@@ -5,6 +5,7 @@
 ## **Project Overview**
 
 The **Sensitive Data Scanner Tool** is a comprehensive solution for detecting, classifying, and managing sensitive data within uploaded files. It identifies various types of sensitive information and categorizes them into compliance-friendly classifications:
+![Approach](app/assets/approach.png)
 
 ### **Supported Data Types**
 - **PAN Card Numbers**
